@@ -10,7 +10,7 @@ function Minter() {
   //React Hooks for form validation
   const { register, handleSubmit } = useForm();
   const [nftPrincipal, setNFTPrincipal] = useState("");
-  const [loderHidden, setLoaderHidden] = useState(true);
+  const [loaderHidden, setLoaderHidden] = useState(true);
 
   //Getting all form data
   async function onSubmit(data) {
@@ -29,7 +29,7 @@ function Minter() {
 if (nftPrincipal == "") {
   return (
     <div className="minter-container">
-    <div hidden={loderHidden} className="lds-ellipsis">
+    <div hidden={loaderHidden} className="lds-ellipsis">
         <div></div>
         <div></div>
         <div></div>
@@ -77,6 +77,7 @@ if (nftPrincipal == "") {
         Minted!
       </h3>
       <div className="horizontal-center">
+      {/* remove toText advice */}
       <Item id={nftPrincipal.toText()}/>
     </div>
   </div>

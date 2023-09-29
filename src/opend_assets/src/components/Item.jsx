@@ -10,7 +10,8 @@ function Item(props) {
   const [image, setImage] = useState("");
   const [name, setName] = useState("");
   const [ownerName, setOwnerName] = useState("");
-  const id = Principal.fromText(props.id);
+
+  const id = props.id;
 
   //To fetch NFT from local device and agent with http
   const localHost = "http://localhost:8080/";
